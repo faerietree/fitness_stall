@@ -1,0 +1,26 @@
+/* media querie handhelds less than 600px */
+@media screen and (max-width: 800px) {
+    div#container {
+        width: 98%;
+        margin-left: 0;
+        clear: both;
+        padding: 1%;
+    }
+    div#container div#content {
+        margin-left: 0;
+    }
+
+    div.sidebar {
+        text-align: left;
+        width: 98%;
+        float: none;
+        padding: 1%;
+    }
+    table.shadow_blue_, table.shadow_blue_:hover {
+        margin: 0px -0px 1%;
+        width: 100%;
+        padding: 0 15px 15px;
+    }
+
+}
+

@@ -47,7 +47,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
 
 
 <p>
-    <strong><a style="color: forestgreen; font-weight: bold;" href=".?page_id=258">Reiterferien:</a></strong><br />
+    <strong><a style="color: forestgreen; font-weight: bold;" href=".?id=258">Reiterferien:</a></strong><br />
     <p>Wir bieten Reiterferien f&uuml;r Kinder ab 6 Jahre im Zeitraum von M&auml;rz bis Mitte November.<br />
 
     1 Woche Reiterferien (Mo-Fr) Vollpension mit &Uuml;bernachtung im Mehrbettzimmer f&uuml;r 320.- Euro . <a href="?id=kontakt">Weitere Termine und Preise auf Anfrage!</a><br />&nbsp;<br />

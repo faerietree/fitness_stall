@@ -68,11 +68,13 @@
 
 
     <div class="ngg-navigation">
-        <a class="prev" href=".?page_id=11&amp;nggpage=3">◄</a>
-        <a class="page-numbers" href=".?page_id=11">1</a>
-        <a class="page-numbers" href=".?page_id=11&amp;nggpage=2">2</a>
-        <a class="page-numbers" href=".?page_id=11&amp;nggpage=3">3</a>
+<!--
+        <a class="prev" href=".?id=11&amp;nggpage=3">◄</a>
+        <a class="page-numbers" href=".?id=11">1</a>
+        <a class="page-numbers" href=".?id=11&amp;nggpage=2">2</a>
+        <a class="page-numbers" href=".?id=11&amp;nggpage=3">3</a>
         <span>4</span>
+-->
     </div>
 
 </div>
