@@ -1,13 +1,13 @@
 <?php
 /*------------------*
- |kontakt.tpl.php -- 
+ |Unsere_Pferde.php 
  *------------------*/
 if (isset($_SESSION['usr'])) { ?>
 
 
     <div id="innerW" class="innerW inW">
 
-	<?php include 'in/overview.in.tpl.php'; ?>
+	<?php include $_SERVER['SCRIPT_NAME'] . ".in.tpl.php"; ?>
 
     </div>
 
@@ -65,10 +65,12 @@ else {//NOT LOGGED IN OVERVIEW ?>
             }
         
             //parse the horse line data
-            $parts = explode('-', $horseline);
+            $parts = explode('__', $horseline);
             $horse = array(); //<-- this clearing of the horse variable is important for not showing wildly mixed horses' data.
             foreach ($parts as $part_pair) {
-                $key = explode(':', $part_pair);
+                $key = explode('-', $part_pair);
+                if (count($key) < 2)
+                    echo '<p>No pair in horse line '. $horseline .'</p>'."\r\n";
                 $value = trim($key[1]);
                 $key = trim($key[0]);
                 $horse[$key] = $value;
@@ -160,13 +162,27 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     continue;
                 }
                 
-                //assemble the imagelink:
-                $imagelink = $path_base . '/' . $horseline . '/' . $file;
+                //assemble the imagelinks:
+                $directory = $path_base . '/' . $horseline . '/';
+                $imagelink = $directory . $file;
+                $previewlink =  $directory . '.preview__' . $file;
+                #$previewlink =  str_replace('.jpg', '', $imagelink, . '__preview.jpg';
+                if (!file_exists($previewlink))
+                {
+                    // Generate the small size preview (thumbnail): TODO Ensure escapeshellarg() is used on external variables.
+                    #$files_space_separated = shell_exec("find $path_base -type f -name '*jpg|png'") #equivalent to backticks ``
+                    #`for f in $files_space_separated; do convert $f -resize x90 ${f#.jpg}'__preview.jpg' done`
+                    #echo 'Generating preview image: ' . $previewlink;
+                    $output = shell_exec("convert $imagelink -resize x90 $previewlink");
+                    #echo $output;
+                }
             ?>
                 <span class="curl">
-		            <img src="<?php echo $imagelink ?>" title="<?php echo $horseline_render ?>" rel="lightbox"
+                    <a href="<?php echo $imagelink ?>" title="" alt="">
+		            <img src="<?php echo $previewlink ?>" title="<?php echo strip_tags($horseline_render) ?>" rel="lightbox"
 		              class="ngg-singlepic ngg-left alignleft size-thumbnail wp-image-558" height="120" alt="" />
-		        </span>
+                    </a>
+		</span>
             <?php } ?>
             <br style="clear:both;"><!-- Clear columns. Begin new line. --><p>&nbsp;</p>
 
