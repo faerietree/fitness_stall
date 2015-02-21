@@ -77,7 +77,7 @@ Es freuen sich auf Euch mehr als 14 Sch&auml;fchen: Paula, Jutta, Afra, Lila, ..
                 $key = explode('-', $part_pair);
                 if (count($key) < 2)
 				{
-                    echo '<p>No pair in line '. $horseline .'</p>'."\r\n";
+                    echo '<p>No - separated pair (' . $key . ') in line '. $horseline .'</p>'."\r\n";
 					continue;
 				}
                 $value = trim($key[1]);
@@ -168,6 +168,7 @@ Es freuen sich auf Euch mehr als 14 Sch&auml;fchen: Paula, Jutta, Afra, Lila, ..
 				$horse_images[] = '.';
 				$horse_images[] = '..';
 				$horse_images[] = $directory;
+				$directory = '';
 			}
             else
 				$horse_images = scandir($directory);
@@ -183,8 +184,12 @@ Es freuen sich auf Euch mehr als 14 Sch&auml;fchen: Paula, Jutta, Afra, Lila, ..
                 }
                 
                 //assemble the imagelink:
-                $imagelink = $directory . '/' . $file;
-                $previewlink =  $directory . '/.preview__' . $file;
+                $prefix = '';
+                if (!empty($directory)) # It is empty e.g. if the images array contains the directory itself because it's a file instead of a directory.
+					$prefix = $directory . '/'; 
+					
+                $imagelink = $prefix . $file;
+                $previewlink = $prefix . '.preview__' . $file;
                 #$previewlink =  str_replace('.jpg', '', $imagelink, . '__preview.jpg';
                 if (!file_exists($previewlink))
                 {
