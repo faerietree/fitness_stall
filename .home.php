@@ -78,9 +78,11 @@ else {//NOT LOGGED IN OVERVIEW ?>
         <a href="./gallery/reitstall/img_1378.jpg" title="Draussen im Gr&uuml;nen macht die Theorie einfach mehr Spass.">
 		<img class="ngg-singlepic ngg-left" src="./gallery/reitstall/thumbs/img_1471.jpg" alt="Draussen im Gr&uuml;nen macht die Theorie einfach mehr Spass." title="Draussen im Gr&uuml;nen macht die Theorie einfach mehr Spass."/>
 	</a>
-	<a href="./gallery/auswahl/badwerk_pause.jpg" title="">
+	<!--<a href="./gallery/auswahl/badwerk_pause.jpg" title="">-->
+    <a href=".sheep/cat-Lamm__name-Lamm__geburt-2014__stockmass-0_40m/Lur_Gaenseblumen_Wiese_gruen__Foto2092.jpg" title="" alt="">
 	<!-- w165 h240 -->
-		<img class="ngg-singlepic ngg-left" src="./gallery/auswahl/badwerk_pause.jpg" alt="" title=""/>
+		<!--<img class="ngg-singlepic ngg-left" src="./gallery/auswahl/badwerk_pause.jpg" alt="" title=""/>-->
+		<img class="ngg-singlepic ngg-left" src=".sheep/cat-Lamm__name-Lamm__geburt-2014__stockmass-0_40m/Lur_Gaenseblumen_Wiese_gruen__Foto2092.jpg" alt="" title=""/>
 	</a>
 	<a href="./gallery/reitstall/img_1255.jpg" title="">
 		<!-- w240 h165 -->

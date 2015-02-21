@@ -1,7 +1,7 @@
 <?php session_start();
 /**------------------------------- *
  *
- * Copyright FairyTree GbR
+ * Copyright FaerieTree
  * [dragontale j.r.i.b.-w.v.w.v.z.]
  *
  *-------------------------------- */
@@ -86,12 +86,12 @@ if (empty($pageId))
 if (!empty($pageId))
     $pageId = toFairy($pageId) . ' - ';
 $title = $pageId . 'Fitness-Stall Badwerk' ;
-$sheets = array('http://dragontale.de/fairyclasses.css'
-                ,'http://dragontale.de/mediacolumn.css'
+$sheets = array('http://ciry.at/fairyclasses.css'
+                ,'http://ciry.at/mediacolumn.css'
                 ,'./css/ngg_dkret3.css'
                 ,'./.fitness-stall.css.php?design='.getIfSet($_SESSION, 'design')
 );
-$scripts = array(0 => './fitnessstall.js',1 => 'http://dragontale.de/fairytale.js');
+$scripts = array(0 => './fitnessstall.js',1 => 'http://ciry.at/fairytale.js');
 $titleIcon = './images/favicon.ico';
 //random header background:
 $pathParts = explode('/', $_SERVER['PHP_SELF']);

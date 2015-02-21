@@ -43,11 +43,11 @@
     $loggedInAddition = isset($_SESSION['usr']) ? '.in' : '';
 	if (empty($_GET['id'])) {
 		$_GET['id'] = 'home';
-		if (!file_exists('./'.$_GET['id'].$loggedInAddition.'.php')) {
-		   $_GET['id'] = '.home';//or #
-		}
 	}
 	$fanfare = './'.$_GET['id'].$loggedInAddition.'.php';//<-- omitted tpl because I question myself if it really is useful.
+	if (strpos('.', $_GET['id']) !== 0 && !file_exists($fanfare)) {
+		   $_GET['id'] = '.' . $_GET['id']; // or prepend #
+	}
 	if (!file_exists($fanfare)) {
         $fanfare = './error404.php';
 	}

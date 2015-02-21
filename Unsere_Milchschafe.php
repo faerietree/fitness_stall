@@ -68,11 +68,18 @@ Es freuen sich auf Euch mehr als 14 Sch&auml;fchen: Paula, Jutta, Afra, Lila, ..
         
             //parse the horse line data
             $parts = explode('__', $horseline);
+			/*if (count($parts) < 1)
+				# Skip highest level directories without any structuring in the filename?
+				continue;
+			*/
             $horse = array(); //<-- this clearing of the horse variable is important for not showing wildly mixed horses' data.
             foreach ($parts as $part_pair) {
                 $key = explode('-', $part_pair);
                 if (count($key) < 2)
-                    echo '<p>No pair in horse line '. $horseline .'</p>'."\r\n";
+				{
+                    echo '<p>No pair in line '. $horseline .'</p>'."\r\n";
+					continue;
+				}
                 $value = trim($key[1]);
                 $key = trim($key[0]);
                 $horse[$key] = $value;
@@ -152,7 +159,18 @@ Es freuen sich auf Euch mehr als 14 Sch&auml;fchen: Paula, Jutta, Afra, Lila, ..
             echo '<p>';
             
             //SHOW ALL IMAGES THAT ARE FOUND IN THE DIRECTORY:
-            $horse_images = scandir($path_base . '/' . $horseline);
+            $directory = $path_base . '/' . $horseline;
+			$horse_images = array();
+            if (!is_dir($directory))
+			{
+				# Include this single image then (or skip)?
+				#continue;
+				$horse_images[] = '.';
+				$horse_images[] = '..';
+				$horse_images[] = $directory;
+			}
+            else
+				$horse_images = scandir($directory);
             if (sizeOf($horse_images) < 3) {
                 echo '<li class="anno" style="list-style: none;">- keinen Eintrag gefunden -</li>';
             }
@@ -165,9 +183,8 @@ Es freuen sich auf Euch mehr als 14 Sch&auml;fchen: Paula, Jutta, Afra, Lila, ..
                 }
                 
                 //assemble the imagelink:
-                $directory = $path_base . '/' . $horseline . '/';
-                $imagelink = $directory . $file;
-                $previewlink =  $directory . '.preview__' . $file;
+                $imagelink = $directory . '/' . $file;
+                $previewlink =  $directory . '/.preview__' . $file;
                 #$previewlink =  str_replace('.jpg', '', $imagelink, . '__preview.jpg';
                 if (!file_exists($previewlink))
                 {
