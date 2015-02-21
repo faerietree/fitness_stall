@@ -10,8 +10,7 @@
         <?php endif ?>
         <li><span id="copyright">&copy; Fitness-Stall Badwerk</span> <!--<span class="meta-sep">|</span>-->
         </li><li> | </li>
-        <li>created by <a href="http://www.studio7media.de/" target="_blank">Achim 
-    Juhl</a>, <a href="http://opensourceecology.de/">Fairytale Productions</a>, <a href="http://diekretzschmars.de/wordpress/themes/dkret-theme/" rel="designer">dkret3</a>
+        <li>created by <a href="http://www.studio7media.de/">A. Juhl</a> (<a href="http://diekretzschmars.de/wordpress/themes/dkret-theme/" rel="designer">dkret3</a>) &amp; <a href="http://github.org/worlddevelopment/">Weltentwicklung</a>
         </li><li> | </li>
         <li><a href="?id=kontakt">Kontakt</a></li>
         <!-- <li> ]</li> -->

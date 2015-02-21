@@ -6,7 +6,7 @@
 
 
     <!-- header has a background depending on the previously randomly picked image. -->
-    <a href="?id=.home" id="header"><!-- onclick="location.href='http://www.fitness-stall.de' ">-->
+    <a href="?id=home" id="header"><!-- onclick="location.href='http://www.fitness-stall.de' ">-->
         <!-- <img src="./img/logos/tree[d]_niceTree_logo.png" alt="" class="logo mA" /> -->
     </a>
 

@@ -714,7 +714,7 @@ div#message span.gold {
 }
 .curl {
     display: inline-block;
-/*	background-color: lavender;#999;*/
+    background-color: #fff;/*lavender;#999;*/
     border: 1px solid #8899AB;
 	-moz-transition: 0.75s ease-in;
     -webkit-transition: all 0.75s ease-in-out;
