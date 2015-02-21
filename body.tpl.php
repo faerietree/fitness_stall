@@ -40,13 +40,14 @@
     <?php
     
     # Dynamisch die Datei laden, oder den Fehlerteufel 404 beschwoeren
-    $loggedInAddition = isset($_SESSION['usr']) ? '.in' : '';
+        $loggedInAddition = isset($_SESSION['usr']) ? '.in' : '';
 	if (empty($_GET['id'])) {
 		$_GET['id'] = 'home';
 	}
 	$fanfare = './'.$_GET['id'].$loggedInAddition.'.php';//<-- omitted tpl because I question myself if it really is useful.
 	if (strpos('.', $_GET['id']) !== 0 && !file_exists($fanfare)) {
 		   $_GET['id'] = '.' . $_GET['id']; // or prepend #
+	           $fanfare = './'.$_GET['id'].$loggedInAddition.'.php';//<-- omitted tpl because I question myself if it really is useful.
 	}
 	if (!file_exists($fanfare)) {
         $fanfare = './error404.php';
