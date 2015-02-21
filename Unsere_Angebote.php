@@ -50,7 +50,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
     <strong><a style="color: forestgreen; font-weight: bold;" href=".?id=258">Reiterferien:</a></strong><br />
     <p>Wir bieten Reiterferien f&uuml;r Kinder ab 6 Jahre im Zeitraum von M&auml;rz bis Mitte November.<br />
 
-    1 Woche Reiterferien (Mo-Fr) Vollpension mit &Uuml;bernachtung im Mehrbettzimmer f&uuml;r 320.- Euro . <a href="?id=kontakt">Weitere Termine und Preise auf Anfrage!</a><br />&nbsp;<br />
+    1 Woche Reiterferien (Mo-Fr) Vollpension mit &Uuml;bernachtung im Mehrbettzimmer (siehe <a href="?id=Reiterferien" title="Zur Seite wechseln." alt="">Reiterferien</a>). <a href="?id=kontakt">Weitere Termine und Preise auf Anfrage!</a><br />&nbsp;<br />
     </p>
 </p>
 
@@ -71,8 +71,8 @@ else {//NOT LOGGED IN OVERVIEW ?>
 
 
 <p>
-    <span style="color: forestgreen; font-weight: bold;">Neu:</span> <br />
-    <span style="color:midnightblue;">Pfingstferien: </span>5 Tage 320 &#8364; + Verl&auml;ngerungsm&ouml;glichkeit: <span style="color: midnightblue;">55 &#8364; / Tag</span>   <br />
+    <span style="color: forestgreen; font-weight: bold;">Extra lange Ferienm&ouml;glichkeit: (Pferdenarrenangebot)</span> <br />
+    <span style="color:midnightblue;">Pfingstferien: </span>5 Tage 330 &#8364; + Verl&auml;ngerungsm&ouml;glichkeit: <span style="color: midnightblue;">55 &#8364; / Tag</span>, bis zu 10 Tage. <br />
 </p>        
         
         
