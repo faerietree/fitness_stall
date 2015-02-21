@@ -92,7 +92,10 @@ Es freuen sich auf Euch mehr als 14 Sch&auml;fchen: Paula, Jutta, Afra, Lila, ..
             //print heading once
             if (isset($horse['cat'])) {
                 if (!isset($printed_already_once[$horse['cat']])) {
-                    echo '<h3>Unsere ' . toFairy($horse['cat']) . 'schafe:</h3>';
+					$post = ' Schafe';
+					if (strpos('_', $horse['cat']) !== count($horse['cat']) - 1)
+					    $post = trim(strtolower($post));
+                    echo '<h3>Unsere ' . toFairy($horse['cat']) . $post . ':</h3>';
                     $printed_already_once[$horse['cat']] = true;
                     if ($horse['cat'] == 'milch') {
                         echo '<p>Die Schafe werden zweimal t&auml;lich gemolken und die Milch in verschiedene K&auml;sesorten (Weich- und Hartk&auml;se) aufbereitet.</p>';

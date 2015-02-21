@@ -78,6 +78,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     echo '<p>No - separated pair (' . $key . ') in line '. $horseline .'</p>'."\r\n";
 					continue;
 				}
+				# ignore a potential third value as it's required for appending a space only.
                 $value = trim($key[1]);
                 $key = trim($key[0]);
                 $horse[$key] = $value;
@@ -90,7 +91,10 @@ else {//NOT LOGGED IN OVERVIEW ?>
             //print heading once
             if (isset($horse['cat'])) {
                 if (!isset($printed_already_once[$horse['cat']])) {
-                    echo '<h3>Unsere ' . toFairy($horse['cat']) . 'pferde:</h3>';
+					$post = ' Pferde';
+					if (strpos('_', $horse['cat']) !== count($horse['cat']) - 1)
+					    $post = trim(strtolower($post));
+                    echo '<h3>Unsere ' . toFairy($horse['cat']) . $post . ':</h3>';
                     $printed_already_once[$horse['cat']] = true;
                     if ($horse['cat'] == 'hof') {
                         echo '<p>Alle unsere Schulpferde werden regelm&auml;&szlig;ig von fachkundigem Reiter korrigiert und weiter ausgebildet.</p>';
