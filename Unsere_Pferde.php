@@ -56,6 +56,23 @@ else {//NOT LOGGED IN OVERVIEW ?>
         //$path_base = '.';
         $horses = scandir($path_base);
         $printed_already_once = array();
+        
+        // construct arrays for sorting categories (as specified in the file/directory names:
+	    $categories_pre_indices = array();
+	    $categories_pre = array();
+	    $categories_pre_index = 0;
+	    
+	    $categories = array();
+	    $categories_index = -1;
+        
+	    $categories_succeding_indices = array();
+	    $categories_succeding = array();
+	    $categories_succeding_index = 0;
+        
+	    $no_category_entries = array();
+
+        $categories_to_order_index = array();
+	    
         foreach ($horses as $horseline) {
             //skip this entry?
             if ($horseline == $_SERVER['PHP_SELF']
@@ -63,7 +80,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     || array_search(substr($horseline, 0, 1), $hiddenIndicators) !== false) {
                 continue;
             }
-        
+            
             //parse the horse line data
             $parts = explode('__', $horseline);
 			/*if (count($parts) < 1)
@@ -75,7 +92,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
                 $key = explode('-', $part_pair);
                 if (count($key) < 2)
 				{
-                    echo '<p>No - separated pair (' . $key . ') in line '. $horseline .'</p>'."\r\n";
+                    echo '<p>No -separated pair (' . $key . ') in line '. $horseline .'</p>'."\r\n";
 					continue;
 				}
 				# ignore a potential third value as it's required for appending a space only.
@@ -88,25 +105,9 @@ else {//NOT LOGGED IN OVERVIEW ?>
             //asort($elements);
             
             
-            //print heading once
-            if (isset($horse['cat'])) {
-                if (!isset($printed_already_once[$horse['cat']])) {
-					$post = ' Pferde';
-					if (strpos('_', $horse['cat']) !== count($horse['cat']) - 1)
-					    $post = trim(strtolower($post));
-                    echo '<h3>Unsere ' . toFairy($horse['cat']) . $post . ':</h3>';
-                    $printed_already_once[$horse['cat']] = true;
-                    if ($horse['cat'] == 'hof') {
-                        echo '<p>Alle unsere Schulpferde werden regelm&auml;&szlig;ig von fachkundigem Reiter korrigiert und weiter ausgebildet.</p>';
-                    }
-                }
-                unset($horse['cat']);
-            }
-            
-            
-            echo '<hr />';
+            $entry = '<hr />';
             //Horse image heading (one heading has multiple images underneath):
-            echo '<p>';
+            $entry .= '<p>';
             $i = 0;
             $horseL = count($horse);
             $horseline_render = '';
@@ -119,8 +120,10 @@ else {//NOT LOGGED IN OVERVIEW ?>
                 }
                 
                 //special output:
+                if ($key == 'cat' || $key == 'category')
+                    continue;
                 //if (isset($horse['geburt'])) {
-                if ($key == 'geburt') {
+                else if ($key == 'geburt') {
                     $age = now('year') - $horse['geburt']/*or $value*/;
                     $horseline_render .= 
                     /*echo*/ $age . ' Jahre';
@@ -129,23 +132,22 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     $horseline_render .= 
                     /*echo*/  str_replace('_', ',', $value) . ' Stockma&szlig;';/*1_10m -> 1,10m*/
                 }
-                else if ($key == 'gegangen' || $key == 'tod' || $key == 'Tod' || strpos($key, '.force') !== false) {
+                else if ($key == 'gegangen' || $key == 'gone' || $key == 'tod' || $key == 'Tod' || strpos($key, '.force') !== false) {
                     $horseline_render .= 
                     /*echo*/  toFairy(str_replace('.force', '', $key)) . ': ' . toFairy($value);/*1_10m -> 1,10m*/
                 }
-                //general case:
+                // general case:
                 else {
-                    $horseline_render .= 
-                    /*echo*/ /*ucfirst($key) . */ toFairy($value);
+                    $horseline_render .= /*echo*/ /*ucfirst($key) . */ toFairy($value);
                 }
                 
                 
-                //separator
+                // separator
                 if ($is_bold !== false || $is_name !== false) {
                     $horseline_render .= 
                     /*echo*/ '</strong>';
                 }
-                //is this the last element pair:
+                // Is this the last element pair?
                 if (++$i != $horseL/* - 1*/) {
                     if ($is_name !== false) {
                         $horseline_render .= 
@@ -157,10 +159,12 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     }
                 }
             }
-            echo $horseline_render . "\n";
-            echo '<p>';
+            $entry .= $horseline_render . "\n";
+            $entry .= '<p>';
             
-            //SHOW ALL IMAGES THAT ARE FOUND IN THE DIRECTORY:
+            
+            
+            // SHOW ALL IMAGES THAT ARE FOUND IN THE DIRECTORY:
             $directory = $path_base . '/' . $horseline;
 			$horse_images = array();
             if (!is_dir($directory))
@@ -175,7 +179,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
             else
 				$horse_images = scandir($directory);
             if (sizeOf($horse_images) < 3) {
-                echo '<li class="anno" style="list-style: none;">- keinen Eintrag gefunden -</li>';
+                $entry .= '<li class="anno" style="list-style: none;">- keinen Eintrag gefunden -</li>';
             }
             foreach ($horse_images as $file) {
                 //skip this entry?
@@ -202,19 +206,125 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     $output = shell_exec("convert $imagelink -resize x90 $previewlink");
                     #echo $output;
                 }
-            ?>
-                <span class="curl">
-                    <a href="<?php echo $imagelink ?>" title="" alt="">
-		            <img src="<?php echo $previewlink ?>" title="<?php echo strip_tags($horseline_render) ?>" rel="lightbox"
-		              class="ngg-singlepic ngg-left alignleft size-thumbnail wp-image-558" height="120" alt="" />
-                    </a>
-		</span>
-            <?php } ?>
-            <br style="clear:both;"><!-- Clear columns. Begin new line. --><p>&nbsp;</p>
+                $entry .= '
+                        <span class="curl">
+                            <a href="' . $imagelink . '" title="" alt="">
+		                    <img src="' . $previewlink . '" title="' . strip_tags($horseline_render) . '" rel="lightbox"
+		                      class="ngg-singlepic ngg-left alignleft size-thumbnail wp-image-558" height="120" alt="" />
+                            </a>
+		                </span>
+		                ';
+		        
+            }
+            
+    	    $entry .= '
+                    <br style="clear:both;"><!-- Clear columns. Begin new line. --><p>&nbsp;</p>
+	            	';
+		    
+            
+            // store if printing heading once
+            if (isset($horse['cat'])) {
+				// order index is appended with .:
+				$cat = $horse['cat'];
+				if (strpos($cat, '.') != false)
+				{
+				    //echo "\n" . 'category with index: ' . $horse['cat'];
+					// sort order index given
+					$parts = explode('.', $horse['cat']);
+					$cat = $parts[0];
+					$categories_to_order_index[$cat] = $parts[1];
+				}
+                
+				// At this point $cat is set correctly no matter if order index has initially been appended or not.
+				if (!isset($categories_to_order_index[$cat]))
+				{
+    				//echo "\n" . 'no cat_order_index: ' . $horse['cat'];
+                	if (!isset($categories[$horse['cat']]))
+						$categories[$horse['cat']] = array();
+					$categories[$horse['cat']][] = $entry;
+				}
+                else
+                {
+                    $cat_order_index = $categories_to_order_index[$cat];
+                    if (strpos($cat_order_index, '-') != false) #array_keys()) !== false))
+                    {
+                	    //echo "\n" . ' succeding category: ' . $horse['cat'] . ' order_index: ' . $cat_order_index;
+					    if (!isset($categories_pre[$categories_succeding_index]) || !isset($categories_succeding[$categories_succeding_index][$cat]))
+                        {
+                            // only increment the index for every different category:
+                            $categories_succeding_index++;
+                        	$categories_succeding[$categories_succeding_index] = array();
+					    	$categories_succeding[$categories_succeding_index][$cat] = array();
+                            $categories_succeding_indices[$categories_succeding_index] = $cat_order_index;
+					    }
+					    $categories_succeding[$categories_succeding_index][$cat][] = $entry;
+                        
+				    }
+				    else // cat_order_index valid and not succeding:
+				    {
+				        //echo "\n" . ' preceding category: ' . $horse['cat'] . ' order_index: ' . $cat_order_index;				    	-
+				        // This results in only the first occurrence of a category with order index being taken into account:
+					    if (!isset($categories_pre[$categories_pre_index]) || !isset($categories_pre[$categories_pre_index][$cat]))
+                        {
+                            // only increment the index for every different category:
+                            $categories_pre_index++;
+                            $categories_pre[$categories_pre_index] = array();
+						    $categories_pre[$categories_pre_index][$cat] = array();
+                            $categories_pre_indices[$categories_pre_index] = $cat_order_index;
+                        }
+				        $categories_pre[$categories_pre_index][$cat][] = $entry;
+				        //echo '<br/>SETTING CATEGORIES PRE: ' . $cat . ' to entry: ' .$entry;
+				        
+				    }
+                    
+				}
+				// Ensure proper category (without a potential temporary order index)
+				//aready ensured above with initializing it and then overwriting$horse['cat'] = $cat;
+	    	}
+	    	else
+	    	{
+	    	    //echo 'no category: ' . $entry;
+	    	    // No category defined, store it nevertheless, add first to make it visible to find anomalies immediately
+	    	    //  and because this way there is no impression that these category-less entries belong to the last heading.
+                $no_category_entries[] = $entry;
+	    	}    
+			
+		}
+        
+        
+        // OUTPUT
+		process_entries($no_category_entries, '', $printed_already_once);
+		
+        // sort categories according to specified position using the indices array:
+        array_multisort($categories_pre_indices, $categories_pre, SORT_ASC, SORT_REGULAR);
+        /*
+        echo "\n<br/>" . 'categories pre: ';
+        var_dump($categories_pre);
+        echo "\n<br/>" . 'indices: ';
+        var_dump($categories_pre_indices);
+        */
+		foreach ($categories_pre as $index => $category_to_entries)
+		    foreach ($category_to_entries as $cat => $entries)
+		    {
+                process_entries($entries, $cat, $printed_already_once);
+		    }
+
+		foreach ($categories as $cat => $entries)
+		{
+            process_entries($entries, $cat, $printed_already_once);
+		}
+
+        # referencing from the end via e.g. -1 = length - 1 = last element:
+        array_multisort($categories_succeding_indices, $categories_succeding, SORT_DESC);
+		foreach ($categories_succeding as $index => $category_to_entries)
+		    foreach ($category_to_entries as $cat => $entries)
+		    {
+                process_entries($entries, $cat, $printed_already_once);
+	    	}
 
 		
-		
-		<?php } ?>
+		?>
+
 		</div>
 		
 		
@@ -222,12 +332,39 @@ else {//NOT LOGGED IN OVERVIEW ?>
 	</div>	
 </div>	
 	
-<?php }//NOT LOGGED IN OVERVIEW -END ?>
+<?php }//NOT LOGGED IN OVERVIEW -END
+function process_entries($entries, $cat, $printed_already_once)
+{
+            //echo 'entries: ';
+            //var_dump($entries);
+            //echo 'category: ';
+            //var_dump($cat);           
+ 	//print heading once
+           	if (isset($cat) && !empty($cat)) {
+           		if (!isset($printed_already_once[$cat])) {
+				    $post = ' Pferde';
+				    if (strpos($cat, '_') === False)//!== count($cat) - 1)
+                    {
+                        // remove spaces
+				        $post = trim(strtolower($post));
+                    }
+                    
+           		    echo '<h3>Unsere ' . toFairy($cat) . $post . ':</h3>';
+                   	$printed_already_once[$cat] = true;
+                       
+                   	// Print special notes:
+                   	if ($cat == 'hof') {
+                   		echo '<p>Alle unsere Schulpferde werden regelm&auml;&szlig;ig von fachkundigem Reiter korrigiert und weiter ausgebildet.</p>';
+                   	}
+               	}
+              	//unset($cat);
+           	}
+           
+    		foreach ($entries as $entry)
+	    	{
+            	echo $entry;
+            }
 
-
-
-
-
-
-
+}
+?>
 
