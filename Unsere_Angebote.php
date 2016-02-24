@@ -72,7 +72,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
 
 <p>
     <span style="color: forestgreen; font-weight: bold;">Extra lange Ferienm&ouml;glichkeit: (Pferdenarrenangebot)</span> <br />
-    <span style="color:midnightblue;">Pfingstferien: </span>5 Tage 330 &#8364; + Verl&auml;ngerungsm&ouml;glichkeit: <span style="color: midnightblue;">55 &#8364; / Tag</span>, bis zu 10 Tage. <br />
+    <span style="color:midnightblue;">Pfingstferien: </span>5 Tage 340 &#8364; + Verl&auml;ngerungsm&ouml;glichkeit: <span style="color: midnightblue;">55 &#8364; / Tag</span>, bis zu 10 Tage. <br />
 </p>        
         
         
