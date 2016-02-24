@@ -1,5 +1,11 @@
-/* media querie handhelds less than 600px */
-@media screen and (max-width: 800px) {
+/* 
+http://stackoverflow.com/questions/15765962/media-only-screen-and-max-width-479px-not-working-for-mobile
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*/
+@media /*only */screen and (max-width: 800px)
+/*@media only screen and ((max-width: 800px) or (max-device-width: 800px))
+*/
+{
     div#container {
         width: 98%;
         margin-left: 0;
