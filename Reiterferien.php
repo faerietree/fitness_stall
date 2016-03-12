@@ -4,20 +4,26 @@ $costs = 340;
 ?>
 
 <table class="shadow_blue_">
-<thead><tr><th><span style="background-color: yellowgreen;"><!-- peru -->
-<img title="Gute Chancen." src="http://img163.imageshack.us/img163/5152/horseheadg.png" alt="HorseHeadLeft" width="37" height="27" /></span></th></tr>
+<thead>
+    <tr>
+        <th >
+            <img title="Gute Chancen." src="images/horsehead_dreamboy.png" alt="HorseHeadLeft" style="width:37px;height:27px; margin:0;" align="left" />
+            <div style="color: forestgreen; font-size:10pt; text-shadow: olive 0 0 1px 1px; display:block; background-color: yellowgreen;"><!-- peru -->
+		Freie Pl&auml;tze 
+            </div>
+        </th>
+    </tr>
 </thead>
 
 <tbody><tr>
 <td colspan="3">Verl&auml;ngerung oder Verk&uuml;rzung der Aufenthalte nach Absprache m&ouml;glich.
 Weitere Termine auf Anfrage! 
-<span class="anno">Start Anmeldung: <span class="forest">Januar <?php echo $year ?></span>!<!--<span style="display:block">
-    Zus&auml;tzliche M&uuml;llabfuhrgeb&uuml;hren vom Land f&uuml;r Ferienbetrieb eingefordert, trotz eindeutig vernachl&auml;ssigbarem M&uuml;llanfall unserer ordentlichen Ferieng&auml;ste! :/
-    
-    
+<!-- <span class="anno">Start Anmeldung: <span class="forest">Januar <?php echo $year ?></span>!
+-->
+<!--<span style="display:block">
     Dieses Jahr keine Preiserh&ouml;hung! Viel Spa&szlig;!
     </span>
-    -->
+-->
 </span>
 </td></tr>
 <tr><td colspan="3"><!-- ____________________________ --><hr class="trenn1" /></td></tr>
