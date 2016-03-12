@@ -54,7 +54,8 @@ Weitere Termine auf Anfrage!
 <tr>
 <td>2. Woche</td>
 <td>Mo, 23.05. - Fr, 27.05.<?php echo $year ?></td>
-<td><strong>***  &euro; </strong> Kreisjugendring</td>
+<td><strong><?php echo $costs ?> &euro;<a class="" href="./.anmeldeformular.pdf"> anmelden</a><br />
+</strong></td>
 </tr>
 
 
@@ -87,7 +88,8 @@ Weitere Termine auf Anfrage!
 <tr>
 <td>5. Woche:</td>
 <td>29.08. - 02.09.<?php echo $year ?></td>
-<td><strong><?php echo $costs ?> &euro; </strong><!--<a href="./.anmeldeformular.pdf">-->auf Anfrage<!--</a>--></td></tr>
+<td><strong>*** &nbsp;&euro; </strong> Kreisjugendring</td>
+</tr>
 
 <tr>
 <td>6. Woche:</td>
