@@ -111,6 +111,19 @@ else {//NOT LOGGED IN OVERVIEW ?>
             $i = 0;
             $horseL = count($horse);
             $horseline_render = '';
+			$age_reference = now('year');
+			foreach ($horse as $key => $value) {
+				//echo 'key: ' . $key . '; value: ' . $value;
+				$key_base = strtolower(substr($key, 0, 3));
+				if ($key_base == 'tod')
+				{
+					//echo 'intval: ' . intval($value) . ' versus: ' . getInt($value);
+					$age_reference = getInt($value);
+					//echo ' reached!!' . $age_reference;
+					break;
+				}
+			}
+			//echo '<br />age reference: ' . $age_reference;
             foreach ($horse as $key => $value) {
                 $is_bold = strpos($key, '.bold');
                 $is_name = strpos($key, 'name');
@@ -124,7 +137,8 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     continue;
                 //if (isset($horse['geburt'])) {
                 else if ($key == 'geburt') {
-                    $age = now('year') - $horse['geburt']/*or $value*/;
+                    $age = $age_reference - $horse['geburt']/*or $value*/;
+					//echo 'AGE = ' . $age;
                     $horseline_render .= 
                     /*echo*/ $age . ' Jahre';
                 }
