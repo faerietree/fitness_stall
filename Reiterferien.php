@@ -9,7 +9,7 @@ $costs = 340;
         <th >
             <img title="Gute Chancen." src="images/horsehead_dreamboy.png" alt="HorseHeadLeft" style="width:37px;height:27px; margin:0;" align="left" />
             <div style="color: forestgreen; font-size:10pt; text-shadow: olive 0 0 1px 1px; display:block; background-color: yellowgreen;"><!-- peru -->
-		Freie Pl&auml;tze 
+		Freie Pl&auml;tze
             </div>
         </th>
     </tr>
@@ -17,7 +17,7 @@ $costs = 340;
 
 <tbody><tr>
 <td colspan="3">Verl&auml;ngerung oder Verk&uuml;rzung der Aufenthalte nach Absprache m&ouml;glich.
-Weitere Termine auf Anfrage! 
+Weitere Termine auf Anfrage!
 <!-- <span class="anno">Start Anmeldung: <span class="forest">Januar <?php echo $year ?></span>!
 -->
 <!--<span style="display:block">
@@ -202,10 +202,10 @@ if (empty($html) || $last_modified_year != $year)
     #$html = iconv($source_encoding, 'utf-8', $html);
     #$html = html_entity_decode(htmlentities($html, ENT_QUOTES, 'UTF-8'), ENT_QUOTES , $source_encoding);
     $html = mb_convert_encoding($html, $source_encoding, 'UTF-8');
-}   
+}
 $tidy = new tidy();
 $config = array(
-    'output-xml'   => false, 
+    'output-xml'   => false,
     'input-xml'    => false, #true,
 #    'add-xml-decl' => true,
 );
@@ -217,7 +217,7 @@ file_put_contents($cache_filename, $year.''.$tidy);
 $html = $tidy;
 
 //$html = preg_replace('~//\s*?<!\[CDATA\[\s*|\s*//\]\]>~', '', $html); // see http://stackoverflow.com/questions/3466035/how-to-skip-invalid-characters-in-xml-file-using-php
-// and http://stackoverflow.com/questions/9855055/how-to-ignore-cdata-tags  
+// and http://stackoverflow.com/questions/9855055/how-to-ignore-cdata-tags
 //$html = stripInvalidXml('' . $html);
 //$html = sanitize_for_xml(''.$html);
 
@@ -280,10 +280,10 @@ while (--$nodeList_index > -1)
         $col = $cols->item($cols_index);
 	#echo $col->ownerDocument->saveHTML($col);
         #echo $col->ownerDocument->documentElement->nodeValue;
-        $text = dom_get_text($col); 
+        $text = dom_get_text($col);
 */
         $text = $row->textContent;
-        $i = strpos($text, $toFind); 
+        $i = strpos($text, $toFind);
         if ($i !== false)
         {
             #echo 'Found ' . $toFind . ' in ' ."'" . $text. "' on position " . $i . ".\r\n";
@@ -326,7 +326,7 @@ while (++$index < $cols_count)
     {
         #echo 'Found holidays: ' . $holidaysCurrent . '<br />'."\r\n";
     }
-    else 
+    else
     {
         continue;
     }
@@ -337,7 +337,7 @@ while (++$index < $cols_count)
     $holidays_date_interval = trim(get_text_from_node_recursively($col));
     #$holidays_date_interval = trim(get_text_from_node($col));
     #->textContent;#nodeValue;
-    
+
 
     if (($output_counter  % $line_break_row_count_interval) == 1)
     {
@@ -363,7 +363,7 @@ while (++$index < $cols_count)
             -->
             <?php echo $holidays_date_interval; ?>
         </td>
-        
+
     <?php
     }
 
@@ -374,7 +374,7 @@ while (++$index < $cols_count)
     ?>
 
        <?php
-       // Are we already at the second 
+       // Are we already at the second
        if ($cols_index < $cols_count - 1)
        {
        ?>
@@ -456,7 +456,7 @@ function dom_find_all_text_nodes($node, $nodes)
     }
 
     //print_r($node);
-    
+
     $nodeList = $node->childNodes;
     #$nodeList_index = $nodeList->length; <-- Attention: Here the text order is messed up.
     $nodeList_index = -1;
@@ -503,7 +503,7 @@ function get_text_from_node_recursively($node)
        #echo $n->ownerDocument->documentElement->nodeValue;
        #$s = (string)$n;
        #print_r($n);
-       $s = get_text_from_node($n); 
+       $s = get_text_from_node($n);
 
        #$s = $n->nodeValue; // TODO textValue() ?
        #echo 'nodeValue: ' . $s . '<br />'."\r\n";
@@ -523,7 +523,7 @@ function get_text_from_node($n)
         return $n->textContent;
     if (!$n->hasChildNodes())
         return '';
-    
+
 
     if ($n->childNodes->length < 2)
         return $n->nodeValue; #firstChild->nodeValue;
@@ -570,7 +570,7 @@ function stripInvalidXml($value)
 {
     $ret = "";
     $current;
-    if (empty($value)) 
+    if (empty($value))
     {
         return $ret;
     }
@@ -766,7 +766,7 @@ function strip_tags_content($text, $tags = '', $invert = FALSE) {
 
   preg_match_all('/<(.+?)[\s]*\/?[\s]*>/si', trim($tags), $tags);
   $tags = array_unique($tags[1]);
-   
+
   if(is_array($tags) AND count($tags) > 0) {
     if($invert == FALSE) {
       return preg_replace('@<(?!(?:'. implode('|', $tags) .')\b)(\w+)\b.*?>.*?</\1>@si', '', $text);
