@@ -33,14 +33,14 @@ Weitere Termine auf Anfrage!
 <strong>Osterferien</strong></td><td></td></tr>
 <tr>
 <td>1. Woche:</td>
-<td>Mo, 21.03. - Do, 24.03.<?php echo $year ?></td>
-<td><strong><?php echo $costs ?> &euro;<a class="" href="./.anmeldeformular.pdf"> anmelden</a></strong></td>
+<td>Mo, 10.04. - Do, 13.04.<?php echo $year ?></td>
+<td><strong>290 &euro;</strong> <a href="./.anmeldeformular.pdf"> anmelden</a></td>
 </tr>
 
 <tr>
 <td>2. Woche:</td>
-<td>Di, 29.03. - So, 01.04.<?php echo $year ?></td>
-<td><strong>290 &euro;</strong> <a href="./.anmeldeformular.pdf"> anmelden</a></td>
+<td>Di, 17.04. - So, 21.04.<?php echo $year ?></td>
+<td><strong><?php echo $costs ?> &euro;<a class="" href="./.anmeldeformular.pdf"> anmelden</a></strong></td>
 </tr>
 
 
@@ -52,14 +52,14 @@ Weitere Termine auf Anfrage!
 <strong>Pfingstferien</strong></td></tr>
 <tr>
 <td>1. Woche</td>
-<td>So, 15.05. - Do, 19.05.<?php echo $year ?><br />
+<td>So, 04.06. - Do, 08.06.<?php echo $year ?><br />
 <span style="font-size:0.8em;color:#888;">(Verl&auml;ngerung m&ouml;glich)</span></td>
 <td><strong><?php echo $costs ?> &euro;<a class="" href="./.anmeldeformular.pdf"> anmelden</a><br />
 <span style="color:#888; font-size:0.8em;">+ 55 &euro; / Tag Verl&auml;ngerung</span></strong></td>
 </tr>
 <tr>
 <td>2. Woche</td>
-<td>Mo, 23.05. - Fr, 27.05.<?php echo $year ?></td>
+<td>Mo, 12.06. - Fr, 16.06.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro;<a class="" href="./.anmeldeformular.pdf"> anmelden</a><br />
 </strong></td>
 </tr>
@@ -73,34 +73,39 @@ Weitere Termine auf Anfrage!
 <strong>Sommerferien</strong></td></tr>
 <tr>
 <td><span class="">1. Woche:</span></td>
-<td>Mo, 01.08. - Fr, 05.08.<?php echo $year ?></td>
+<td>Mo, 31.07. - Fr, 04.08.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro;</strong> <a href="./.anmeldeformular.pdf"> anmelden</a></td></tr>
 
 <tr>
 <td><span class="">2. Woche:</span></td>
-<td>08.08. - 12.08.<?php echo $year ?></td>
-<td><strong><?php echo $costs ?> &euro;</strong> <a href="./.anmeldeformular.pdf"> anmelden</a></td></tr>
+<td>Mo, 07.08. - Fr, 11.08.<?php echo $year ?></td>
+<td><strong><?php echo $costs ?> &euro;</strong><!-- color: #00e000; --> <a href="./.anmeldeformular.pdf"> anmelden</a></td>
+</tr>
 
 <tr>
 <td><span class="">3. Woche:</span></td>
-<td>15.08. - 19.08.<?php echo $year ?></td>
-<td><strong><?php echo $costs ?> &euro;</strong><a href="./.anmeldeformular.pdf"> anmelden</a></td></tr>
+<td>Mo, 14.08. - Fr, 18.08.<?php echo $year ?></td>
+<td><strong><?php echo $costs ?> &euro; </strong><!--<a href="./.anmeldeformular.pdf">--> auf Anfrage<!--</a>--></td>
+</tr>
 
 <tr>
 <td><span class="">4. Woche:</span></td>
-<td>22.08. - 26.08.<?php echo $year ?></td>
-<td><strong><?php echo $costs ?> &euro;</strong><!-- color: #00e000; --> <a href="./.anmeldeformular.pdf"> anmelden</a></td></tr>
+<td>Mo, 21.08. - Fr, 25.08.<?php echo $year ?></td>
+<td><strong><?php echo $costs ?> &euro;</strong><!-- color: #00e000; --> <a href="./.anmeldeformular.pdf"> anmelden</a></td>
+</tr>
 
 <tr>
 <td>5. Woche:</td>
-<td>29.08. - 02.09.<?php echo $year ?></td>
-<td><strong>*** &nbsp;&euro; </strong> Kreisjugendring</td>
+<td>Mo, 28.08. - Fr, 01.09.<?php echo $year ?></td>
+<td><strong><?php echo $costs ?> &euro;</strong><!-- color: #00e000; --> <a href="./.anmeldeformular.pdf"> anmelden</a></td>
+<!--<td><strong>*** &nbsp;&euro; </strong> Kreisjugendring</td>-->
 </tr>
 
 <tr>
 <td>6. Woche:</td>
-<td>05.09. - 09.09.<?php echo $year ?></td>
-<td><strong><?php echo $costs ?> &euro; </strong><!--<a href="./.anmeldeformular.pdf">--> auf Anfrage<!--</a>--></td></tr>
+<td>Mo, 04.09. - Fr, 08.09.<?php echo $year ?></td>
+<td><strong><?php echo $costs ?> &euro; </strong><!--<a href="./.anmeldeformular.pdf">--> auf Anfrage<!--</a>--></td>
+</tr>
 
 
 <!--
@@ -118,7 +123,7 @@ Weitere Termine auf Anfrage!
 <strong>Herbstferien</strong></td></tr>
 <tr>
 <td>1. Woche</td>
-<td>Mo, 31.10. - Fr, 04.11.<?php echo $year ?></td>
+<td>Mo, 30.10. - Fr, 03.11.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro;</strong> <a href="./.anmeldeformular.pdf"> anmelden</a></td></tr>
 
 <tr><td colspan="3"><!-- ____________________________ --><hr class="trenn1" /></td></tr>
