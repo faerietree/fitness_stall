@@ -3,11 +3,7 @@
     
     <!-- TOP -->
     <?php
-    //SWITCH => PAGE TO LOAD!
-    if (!isset($_GET['id'])) {
-        $_GET['id'] = isset($_SESSION['id']) ? $_SESSION['id'] : '';
-    }
-    //
+	require('../.determine_file.php');
     if (isset($_POST['task']) && $_POST['task'] != 'logout'
             || isset($_SESSION['usr'])) { ?>
         <!-- MESSAGE -->
@@ -36,32 +32,13 @@
     <div id="container" class="middle" onmouseover="fadeInTo_c('paradisebird', 100, 300);"
      onmouseout="fadeOutTo_c('paradisebird', 0, 100);">
 
-     	
-    <?php
-    
-    # Dynamisch die Datei laden, oder den Fehlerteufel 404 beschwoeren
-        $loggedInAddition = isset($_SESSION['usr']) ? '.in' : '';
-	if (empty($_GET['id'])) {
-		$_GET['id'] = 'home';
-	}
-	$fanfare = './'.$_GET['id'].$loggedInAddition.'.php';//<-- omitted tpl because I question myself if it really is useful.
-	if (strpos('.', $_GET['id']) !== 0 && !file_exists($fanfare)) {
-		   $_GET['id'] = '.' . $_GET['id']; // or prepend #
-	           $fanfare = './'.$_GET['id'].$loggedInAddition.'.php';//<-- omitted tpl because I question myself if it really is useful.
-	}
-	if (!file_exists($fanfare)) {
-        $fanfare = './error404.php';
-	}
-    ?>
         <!-- PAGE CONTENT -->
         <div id="content" class="limitImageSize <?php echo $_GET['id'] ?>W">
             <?php if ($_GET['id'] != 'home' && $_GET['id'] != '.home' && $_GET['id'] != '#home') { ?>
             <h2 class=" bold"><?php echo toFairy($_GET['id']) ?></h2>
             <?php } ?>
 	<?php
-	
-	require($fanfare);
-	
+		require($file);
     ?>
         </div>
     </div>
