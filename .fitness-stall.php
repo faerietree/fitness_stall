@@ -14,8 +14,8 @@ if (isset($_POST['usr']) && isset($_POST['pw']) || isset($_SESSION['usr'])) {
      // DB-CONNECT
      require_once('./db.inc.php');              //mysqli-obj $mysqli
 }
-include_once('../functions.inc.php');            //some functions
-include_once('../functions2i.inc.php');          //some more functions =)
+include_once('../.functions.inc.php');            //some functions
+include_once('../.functions2i.inc.php');          //some more functions =)
 include_once('../tags.inc.php');                 //some general Tag-Vorlagen
 
 require_once('../User.class.php');            	//static user-class
