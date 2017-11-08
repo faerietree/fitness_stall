@@ -82,7 +82,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
     <a href=".sheep/cat-Lamm__name-Lamm__geburt-2014__stockmass-0_40m/Lur_Gaenseblumen_Wiese_gruen__Foto2092.jpg" title="" alt="">
 	<!-- w165 h240 -->
 		<!--<img class="ngg-singlepic ngg-left" src="./gallery/auswahl/badwerk_pause.jpg" alt="" title=""/>-->
-		<img class="ngg-singlepic ngg-left" src=".sheep/cat-Lamm__name-Lamm__geburt-2014__stockmass-0_40m/Lur_Gaenseblumen_Wiese_gruen__Foto2092.jpg" alt="" title=""/>
+		<img class="ngg-singlepic ngg-left" src=".sheep/cat-Lamm__name-Lamm__note-2_Tage_alt,_Geburt_2014__stockmass-0_40m/Lur_Gaenseblumen_Wiese_gruen__Foto2092.jpg" alt="" title=""/>
 	</a>
 	<a href="./gallery/reitstall/img_1255.jpg" title="">
 		<!-- w240 h165 -->
@@ -111,8 +111,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
         <p><strong>Wir alle freuen uns &uuml;ber Euren Besuch!</strong></p>
 
 
-										
-					</div><!-- .entry-content -->
+						</div><!-- .entry-content -->
 				</div><!-- #post?? .sandbox_post_class() -->
 
 
