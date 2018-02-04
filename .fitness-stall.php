@@ -18,7 +18,7 @@ include_once('../.functions.inc.php');            //some functions
 include_once('../.functions2i.inc.php');          //some more functions =)
 include_once('../tags.inc.php');                 //some general Tag-Vorlagen
 
-require_once('../User.class.php');            	//static user-class
+require_once('../.User.class.php');            	//static user-class
 if (isset($_SESSION['usr'])) {
     require_once('./HowTo.class.php');              //ENGINE
     $baby = new HowTo($mysqli);                     //nu erblicke die Welt =)
@@ -26,7 +26,7 @@ if (isset($_SESSION['usr'])) {
 
 
 //BLOG-ENGINE
-require_once('../Blog.class.php');               //ENGINE
+require_once('../.Blog.class.php');               //ENGINE
 $blog = new Blog(false, './blog');              //nu erblicke die Welt =)
 
 
@@ -79,7 +79,7 @@ if (isset($_SESSION['usr'])) {
     User::loadAll();
 }
 //+++++++PAGE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-include_once('../Page.class.php');               //Page-Geruest --Head-->Foot--
+include_once('../.Page.class.php');               //Page-Geruest --Head-->Foot--
 $pageId = getIfSet($_GET, 'id');
 if (empty($pageId))
     $pageId = getIfSet($_GET, 'id');
