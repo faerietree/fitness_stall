@@ -19,7 +19,7 @@ html, body {
 	height: auto !important;
 	height: 100%;
 	min-height: 100%;
-	/*margin: 15px 0px 0 0;*/
+	/*margin: 1rem 0px 0 0;*/
 }
 body {
   background-color: #fff;
@@ -40,8 +40,11 @@ div#wrapper {
 #header {
     display: block;
 	height: 250px;
-	margin: 15px 20px 10px 20px;
+	margin: 1rem 1.3rem 10px 1.3rem;
+	margin: 1rem 1.3rem 1rem 1.3rem;
+	margin: 2% 2% 3% 2%;
 }
+
 div#access {
   height: 25px;
   padding: 0px 10px 2px 5px;
@@ -49,29 +52,43 @@ div#access {
 div#container {
 	clear: both;
 	float: left;
-	margin: 0 -320px 50px 0;
+	margin: 0 -31.3rem 50px 0;
 	width: 100%;
 }
 div#content {
-	margin: 20px 350px 0 0;
+	width: 96%;
+	/*
+	margin: 1.3rem 350px 0 0;
+	*/
 	overflow: hidden;
-	padding: 0 20px;
+	padding: 0 2%;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	margin-left: -1px; /* border offset */
 }
 div#content.widecolumn {
 	margin: 25px 0 0;
 }
 div.sidebar {
-	float: right;
 	overflow: hidden;
-	padding: 0 15px;
-	width: 230px;
+	width: 250px;
 	font-size: 1.0em;
+	float: left;
+	display: inline-block;
+}
+div#primary + *
+{
+	margin-top: 1rem !important;
+}
+div#primary ~ *
+{
+	width: 99%;
 }
 div#primary	{
-	margin: 15px 12px 0;
+	margin: 1rem 12px 1rem 0;
 }
 div#secondary	{
-	margin: 0 0 20px;
+	margin: 0 0 1.3rem;
 	clear: right;
 }
 .sidebar-column {
@@ -82,12 +99,12 @@ div#secondary	{
 }
 #sidebar-column1 {
 	float: left;
-	margin: 15px 0;
+	margin: 1rem 0;
 }
 
 #sidebar-column2 {
 	float: right;
-	margin: 15px 0;
+	margin: 1rem 0;
 }
 div#bottombars {
   clear: both;
@@ -99,7 +116,7 @@ div#bottombars {
   overflow: hidden;
 	margin: 0 2%;
 	width: 28%;
-	padding: 0 0 20px;
+	padding: 0 0 1.3rem;
 }
 div#footer {
 	clear: both;
@@ -123,7 +140,7 @@ div#footer {
 /* Default html styles and css classes */
 h2, h2 a, h2 a:hover, h3, h3 a, h3 a:hover, h4, h4 a, h4 a:hover {
 	color: #666;
-	margin: 20px 0 10px;
+	margin: 1.3rem 0 10px;
 }
 a {
 	color: #07c;
@@ -173,8 +190,8 @@ code {
 blockquote {
 	background-color: #F5FCFF;
 	border: 1px solid #D1EFFF;
-	margin: 5px 15px;
-	padding: 5px 20px;
+	margin: 5px 1rem;
+	padding: 5px 1.3rem;
 }
 .right {
 	text-align: right;
@@ -196,7 +213,7 @@ blockquote {
 	padding: 10px 0 0 0;
 }
 .space {
-	padding: 15px 0 0 0;
+	padding: 1rem 0 0 0;
 }
 .border {
 	border-bottom: 1px solid #444;
@@ -251,6 +268,11 @@ img.alignright {
 }
 
 /* forms and tables */
+div#primary ~ table
+{
+	width: 60%;
+}
+
 input, textarea {
 	background: url(images/bg-input.jpg) top left repeat-x;
 	border: 1px solid #ddd;
@@ -403,7 +425,7 @@ body.pageid-4 #header {
 	padding: 0 0 0 16px;
 }
 #content ul ul li {
-	padding: 0 0 0 15px;
+	padding: 0 0 0 1rem;
 }
 #content ol li {
 	margin: 0 0 0 30px;
@@ -433,7 +455,7 @@ div.hentry div.entry-content ul.xoxo li ul {
 	display: inline;
 }
 #content .page-title {
-	margin: 0 0 20px;
+	margin: 0 0 1.3rem;
 }
 .entry-calendar-date { /* calendar like dates */
 	border: 1px solid #ccc;
@@ -488,7 +510,7 @@ div.hentry div.entry-content ul.xoxo li ul {
 	width: 100%;
 }
 .home .entry-meta {
-	margin: 20px 0;
+	margin: 1.3rem 0;
 }
 
 .entry-date {
@@ -535,7 +557,7 @@ div.hentry div.entry-content ul.xoxo li ul {
 }
 .single .edit-link {
 	display: block;
-	margin: 20px 0 0;
+	margin: 1.3rem 0 0;
 }
 .comments .edit-link {
 	display: inline;
@@ -555,7 +577,7 @@ div.hentry div.entry-content ul.xoxo li ul {
 #content .post, #content .singlepost {
 	clear: both;
 	margin: 0 0 10px;
-	padding: 0 0 20px;
+	padding: 0 0 1.3rem;
 }
 .single #content .post {
 	margin: 0;
@@ -594,7 +616,7 @@ body.home #content div.category-asides {
 	border-bottom: 1px solid #ccc;
 	border-top: 1px solid #ccc;
 	margin: 0 0 45px;
-	padding: 10px 0 10px 20px;
+	padding: 10px 0 10px 1.3rem;
 }
 /* comments*/
 #comments {
@@ -615,7 +637,7 @@ body.home #content div.category-asides {
 	font-size: 1.1em;
 }
 .comment-meta {
-	height: 15px;
+	height: 1rem;
 }
 
 .comment-gravatar {
@@ -636,7 +658,7 @@ body.home #content div.category-asides {
 	color: #3A7930;
 	float: right;
 	font-size: 1.2em;
-	margin: 10px 0 0 20px;
+	margin: 10px 0 0 1.3rem;
 	padding: 3px 0 5px 2px;
 }
 #trackbacks-list h3, .trackbacknumber {
@@ -644,7 +666,7 @@ body.home #content div.category-asides {
 }
 #comments li.comment, #comments li.pingback {
 	list-style: none;
-	margin: 20px 0;
+	margin: 1.3rem 0;
 	overflow: hidden;
 	padding: 7px;
 }
@@ -660,11 +682,11 @@ body.home #content div.category-asides {
 }
 #comments li.pingback .alt {
 	background: #f8f8f8 url(images/trackback_alt.png) no-repeat 0 8px;
-	padding: 7px 7px 7px 20px;
+	padding: 7px 7px 7px 1.3rem;
 }
 #comments li.pingback {
 	background: #fff url(images/trackback.png) no-repeat 0 8px;
-	padding: 7px 7px 7px 20px;
+	padding: 7px 7px 7px 1.3rem;
 }
 .unapproved {
 	background: #393;
@@ -674,7 +696,7 @@ body.home #content div.category-asides {
 	text-align: center;
 }
 p#comment-notes {
-	margin: 0 0 20px;
+	margin: 0 0 1.3rem;
 }
 #commentform {
 	width: 100%;
@@ -690,13 +712,13 @@ p#comment-notes {
 	border-top: 1px solid red;
 	border-bottom: 1px solid red;
 	padding: 10px;
-	margin: 15px 0 15px 0;
+	margin: 1rem 0 1rem 0;
 }
 #comment-live-preview {
 	background: #f8f8f8;
 	border-bottom: 1px dotted;
 	border-top: 1px dotted;
-	margin: 15px 0 10px;
+	margin: 1rem 0 10px;
 	padding: 5px;
 }
 #comments blockquote, #live-preview blockquote {
@@ -713,7 +735,7 @@ p#comment-notes {
 	border-bottom: 1px dotted #444;
     width: 170px;
 	color: #3a7930;
-	margin: 15px 0 7px;
+	margin: 1rem 0 7px;
 	padding: 2px 0px;
 	font-size: 1.1em;
 }
@@ -724,7 +746,7 @@ p#comment-notes {
 #wrapper .pagenav {
 	background: #eefad7;
 	border: 2px dotted #444;
-	margin: 15px 0 0;
+	margin: 1rem 0 0;
 	padding: 0 7px;
 }
 .pagenav ul {
@@ -738,7 +760,7 @@ p#comment-notes {
 	background: url(images/bullet_sub.gif) no-repeat;
 	padding: 0 0 0 17px;
 }
-.sidebar ul ul li, #bottombars ul ul li {
+#content .sidebar li, #bottombars li {
 	background: url(images/sonne_klein.gif) no-repeat;
 	padding: 2px 0 0 22px;
 }
@@ -810,7 +832,7 @@ li.ec3_list_month { background: none!important; font-weight: bold; padding: 10px
 /* iCal Events */
 #nexticalevents { font-size: 0.9em; }
 #nexticalevents ul li { background: none!important; padding: 0!important;}
-#nexticalevents ul li ul li { 	background: url(images/bullet_blue.gif) no-repeat!important; color: #048; padding: 0 0 3px 15px!important;}
+#nexticalevents ul li ul li { 	background: url(images/bullet_blue.gif) no-repeat!important; color: #048; padding: 0 0 3px 1rem!important;}
 
 /* wp-quotes */
 .wp_quotes_quote { margin: 5px 0; }
@@ -842,7 +864,7 @@ ul.wp-tag-cloud li.t9 a { color:#181818; font-size: 1.45em; }
 ul.wp-tag-cloud li.t10 a { color:#0c0c0c; font-size: 1.5em; }
 
 /* Pagebar */
-.pagebar { text-align: center; padding: 20px 0 20px 0; margin: 0px; }
+.pagebar { text-align: center; padding: 1.3rem 0 1.3rem 0; margin: 0px; }
 .pagebar a, .pageList .this-page { padding: 2px 6px; border: solid 1px #ddd; background: #fff; text-decoration: none; }
 .pagebar a:visited { padding: 2px 6px; border: solid 1px #ddd; background: #fff; text-decoration: none; }
 .pagebar .break { padding: 2px 6px; border: none; background: #fff; text-decoration: none; }
@@ -855,7 +877,7 @@ ul.wp-tag-cloud li.t10 a { color:#0c0c0c; font-size: 1.5em; }
 	border-bottom: 1px solid #D1EFFF;
 	border-top: 1px solid #D1EFFF;
 	font-size: 1.1em;
-	margin:20px 0 20px 0;
+	margin:1.3rem 0 1.3rem 0;
 	padding: 10px 0 0;
 }
 .download-link img { border: none!important; float: left; margin: 5px 10px!important; }

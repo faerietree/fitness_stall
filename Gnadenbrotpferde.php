@@ -4,7 +4,7 @@
 <p>Bei uns können Sie Gnadenbrotpferde einstellen.</p>
 
 
-<h3 style="widht: 100%;border-bottom:1px solid black;">Unsere Gnadenbrotpferde:</h3>
+<h3 style="">Unsere Gnadenbrotpferde:</h3>
 <div class="box">
 Nadine, Haflinger, Geb. 1989, verstorben 2013
 
@@ -15,12 +15,10 @@ Nadine, Haflinger, Geb. 1989, verstorben 2013
 
 <style type="text/css">
 div.box {
-    -moz-box-shadow: 1px 1px 3px #001;
-    -webkit-box-shadow: 1px 1px 3px #001;
-    -ms-box-shadow: 2px 2px 3px #001;
     margin: 15px 2px;
-    padding: 15px;
+    padding: 15px 0 15px 15px;
     height: 50px;
     border:1px solid #eee;
+	width: 90% !important;
 }
 </style>

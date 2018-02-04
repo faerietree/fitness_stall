@@ -2,7 +2,7 @@
 http://stackoverflow.com/questions/15765962/media-only-screen-and-max-width-479px-not-working-for-mobile
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 */
-@media /*only */screen and (max-width: 800px)
+@media /*only */screen and (max-width: 500px)
 /*@media only screen and ((max-width: 800px) or (max-device-width: 800px))
 */
 {
@@ -22,11 +22,15 @@ http://stackoverflow.com/questions/15765962/media-only-screen-and-max-width-479p
         float: none;
         padding: 1%;
     }
-    table.shadow_blue_, table.shadow_blue_:hover {
+    table {
         margin: 0px -0px 1%;
         width: 100%;
-        padding: 0 15px 15px;
     }
+	div#primary ~ *,
+	div#primary ~ table
+	{
+		width: 100%;
+	}
 
 }
 

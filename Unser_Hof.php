@@ -15,15 +15,14 @@
 
 <div class="mT50px">
     <ul style="list-style-type:square;">
-        <li>Reitplätze 22 X 44 m und 12 x 18 m</li>
-        <li>Liege - und Spielwiese mit Gartenmöbeln</li>
+		<li>Professioneller Otto Reitplatz 22 X 44 m</li>
+		<li>Voltigierplatz 12 x 18 m</li>
+        <li>Liege- und Spielwiese mit Gartenmöbeln</li>
         <li>Gartenterrasse mit Grillplatz</li>
-        <li>Kleiner Kinderspielplatz</li>
         <li>Spielscheune</li>
         <li>Dart</li>
         <li>Kicker</li>
         <li>Tischtennis</li>
-        <li>Trampolin</li>
     </ul>
 </div>
 
