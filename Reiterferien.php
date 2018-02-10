@@ -16,14 +16,12 @@ $costs = 360;
 </thead>
 
 <tbody><tr>
-<td colspan="3">Verl&auml;ngerung oder Verk&uuml;rzung der Aufenthalte nach Absprache m&ouml;glich.
-Weitere Termine auf Anfrage!
+<td colspan="3">
 <!-- <span class="anno">Start Anmeldung: <span class="forest">Januar <?php echo $year ?></span>!
 -->
-<!--<span style="display:block">
-    Dieses Jahr keine Preiserh&ouml;hung! Viel Spa&szlig;!
-    </span>
--->
+<span style="display:block">
+    Neu: Ab diesem Jahr mit Sandplatz! Viel Spa&szlig;!
+</span>
 </span>
 </td></tr>
 <tr><td colspan="3"><!-- ____________________________ --><hr class="trenn1" /></td></tr>
@@ -128,6 +126,11 @@ Weitere Termine auf Anfrage!
 
 <tr><td colspan="3"><!-- ____________________________ --><hr class="trenn1" /></td></tr>
 
+<tr>
+<td colspan="3">Verl&auml;ngerung oder Verk&uuml;rzung der Aufenthalte nach Absprache m&ouml;glich.
+Weitere Termine auf Anfrage!
+</td>
+</tr>
 </tbody></table>
 
 
