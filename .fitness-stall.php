@@ -16,6 +16,7 @@ if (isset($_POST['usr']) && isset($_POST['pw']) || isset($_SESSION['usr'])) {
 }
 include_once('../.functions.inc.php');            //some functions
 include_once('../.functions2i.inc.php');          //some more functions =)
+include_once('../tags.inc.php');                 //some general Tag-Vorlagen
 
 require_once('../.User.class.php');            	//static user-class
 if (isset($_SESSION['usr'])) {
@@ -57,7 +58,7 @@ if (isset($_POST['task'])) {
         //Evtl nice feature: session to db!?
         User::logout();
         break;
-
+        
     #register
     case 'register':
         User::register();
