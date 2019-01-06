@@ -763,7 +763,7 @@ p#comment-notes {
 #content .sidebar li, #bottombars li {
 	background: url(images/sonne_klein.gif) no-repeat;
 	background-position: left center;
-	padding: 4px 0 0 22px;
+	padding: 5px 0 5px 22px;
 }
 .sidebar .linkcat ul li, #bottombars .linkcat ul li {
 	background: url(images/bullet_go.gif) no-repeat;

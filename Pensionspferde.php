@@ -1,7 +1,7 @@
 <span style="te<xt-shadow:0 0 3px darkslateblue;">
 <!--Diese Seite befindet sich derzeit noch im Aufbau ...--></span>
 
-<p>Bei uns können Sie Gnadenbrotpferde einstellen.</p>
+<p>Bei uns können Sie Ihre Lieblinge einstellen.</p>
 
 
 <h3 style="">Unsere Gnadenbrotpferde:</h3>

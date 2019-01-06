@@ -37,8 +37,7 @@
         <!--menu-->
         <h3 class="widgettitle">Hauptmen&uuml;</h3>
         <?php
-        include_once('dynamicmenu.config.php');
-        include_once('DynamicMenu.class.php');
+        include_once('../dynamic_menu/DynamicMenu.class.php');
         ?>
     </div>
             <?php if ($_GET['id'] != 'home' && $_GET['id'] != '.home' && $_GET['id'] != '#home') { ?>
