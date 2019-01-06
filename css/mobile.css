@@ -2,21 +2,15 @@
 http://stackoverflow.com/questions/15765962/media-only-screen-and-max-width-479px-not-working-for-mobile
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 */
-@media /*only */screen and (max-width: 500px)
-/*@media only screen and ((max-width: 800px) or (max-device-width: 800px))
-*/
+@media (max-width: 500px)
 {
-    div#container {
-        width: 98%;
-        margin-left: 0;
-        clear: both;
-        padding: 1%;
-    }
-    div#container div#content {
-        margin-left: 0;
+    body
+    {
+        font-size: 15px;
     }
 
     div.sidebar {
+    	font-size: 1.8rem;
         text-align: left;
         width: 98%;
         float: none;

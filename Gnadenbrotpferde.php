@@ -6,8 +6,10 @@
 
 <h3 style="">Unsere Gnadenbrotpferde:</h3>
 <div class="box">
+Flora, Haflinger, Geb. 1992
+</div>
+<div class="box">
 Nadine, Haflinger, Geb. 1989, verstorben 2013
-
 </div>
 <div class="box">
 

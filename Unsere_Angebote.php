@@ -65,14 +65,14 @@ else {//NOT LOGGED IN OVERVIEW ?>
 
 <p>
     <strong>Spezial:</strong><br />
-    Bogenschie&szlig;en mit oder ohne Trainer nach Absprache.<br />&nbsp;<br /><br />
+    Bogenschie&szlig;en mit oder ohne Trainer nach Absprache.<br />&nbsp;<br />
 </p>
 
 
 
 <p>
     <span style="color: forestgreen; font-weight: bold;">Extra lange Ferienm&ouml;glichkeit: (Pferdenarrenangebot)</span> <br />
-    <span style="color:midnightblue;">Pfingstferien: </span>5 Tage 340 &#8364; + Verl&auml;ngerungsm&ouml;glichkeit: <span style="color: midnightblue;">55 &#8364; / Tag</span>, bis zu 10 Tage. <br />
+    <span style="color:midnightblue;">Pfingstferien: </span>5 Tage + Verl&auml;ngerungsm&ouml;glichkeit: bis zu 10 Tage. <br />
 </p>        
         
         

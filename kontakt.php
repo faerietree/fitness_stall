@@ -64,7 +64,11 @@ else {//NOT LOGGED IN OVERVIEW ?>
         </p>
         
         <p>
-        Webmaster: <a href="mailto:achim.juhl@gmail.com" target="_blank">achim.juhl&lt;at&gt;gmail.com</a> & <a href="mailto:fitness-stall@web.de">fitness-stall&lt;at&gt;web.de</a>
+            <strong>Datenschutz</strong>
+            <p>
+		IP-Adressen sowie vom Browser übermittelte Daten (beispielsweise Browsertyp/-version, Betriebssystem) werden zur Verfolgung von Vergehen gespeichert.
+		Es erfolgt keine Weitergabe an Dritte. Weitere Daten werden nicht erhoben. Weder Cookies noch externe Dienste wie Google Fonts, Analytics oder Piwik werden verwendet. Gemäß §16 TMG
+            </p>
         </p>
 
 

@@ -43,7 +43,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
 
 
 
-
+<div>
         <h2>Herzlich Willkommen im Fitness-Stall Badwerk!</h2>
         <p>
 	<div>Seit 1999 tummeln sich Reitsch&uuml;ler und seit 2004 auch kleine und gro&szlig;e Ferieng&auml;ste bei uns. Pr&uuml;fungen zum Steckenpferd, kleinen und gro&szlig;en Hufeisen finden seit 2005 regelm&auml;&szlig;ig statt.
@@ -63,8 +63,8 @@ else {//NOT LOGGED IN OVERVIEW ?>
 		<img class="ngg-singlepic ngg-left" src="./gallery/reitstall/thumbs/img_1255.jpg" alt="" title=""/>
 	</a>
 	</div>
-	<div style="">
-        Circa 30 Milchk&uuml;he mit Nachzucht stehen in unserem Stall. Ein Stier. Eine Ziege, mehrere Hasen, viele Katzen, gelegentlich Rehe und permanent &uuml;ber ein Dutzend Pferde bev&ouml;lkern zus&auml;tzlich unseren Hof.
+	<div style="display:block;">
+        Enten, mehrere Schafe, viele Katzen, gelegentlich Rehe, unser Labrador Phil und &uuml;ber ein Dutzend Pferde bev&ouml;lkern unseren Hof. Bis Oktober 2018 standen zus&auml;tzlich 30 Milchk&uuml;he mit Nachzucht in unserem Stall.
 	</div>
 	<div style="">
         <a href="./gallery/reitstall/img_1619.jpg" title=""><!--1623-->
@@ -77,10 +77,11 @@ else {//NOT LOGGED IN OVERVIEW ?>
 		<img class="ngg-singlepic ngg-left" src="./gallery/auswahl/badwerk_kaelbchen.jpg" alt="" title=""/>
 	</a>
 	</div>
-	<div style="">
-        Und dann nat&uuml;rlich wir, die Zweibeiner: Finn, Marietta, h&auml;ufig Jan, gelegentlich Anuschka, sowie Andrea und Georg Waibl. Nicht zu vergessen unsere Oma, Rosina Waibl.</div>
+	<div style="display:block;">
+        Und dann nat&uuml;rlich wir, die Zweibeiner: Finn, Marietta, gelegentlich Anuschka und Jan, sowie Andrea und Georg Waibl. Nicht zu vergessen unsere Oma, Rosina Waibl.</div>
 	</p>
         <p><strong>Wir alle freuen uns &uuml;ber Euren Besuch!</strong></p>
+</div>
 
 
 

@@ -1,6 +1,6 @@
 <?php
 $year = now('year');
-$costs = 360;
+$costs = 370;
 ?>
 
 <table class="">
@@ -31,14 +31,14 @@ $costs = 360;
 <strong>Osterferien</strong></td><td></td></tr>
 <tr>
 <td>1. Woche:</td>
-<td>Mo, 26.03. - Do, 30.03.<?php echo $year ?></td>
+<td>Mo, 15.04. - Do, 18.04.<?php echo $year ?></td>
 <td><strong><?php echo $costs - 50 ?>  &euro;</strong> <a href="./.anmeldeformular.pdf"> anmelden</a></td>
 </tr>
 
 <tr>
 <td>2. Woche:</td>
-<td>Di, 02.04. - So, 06.02.<?php echo $year ?></td>
-<td><strong><?php echo $costs ?> &euro;<a class="" href="./.anmeldeformular.pdf"> anmelden</a></strong></td>
+<td>Di, 23.04. - Fr, 26.04.<?php echo $year ?></td>
+<td><strong><?php echo $costs - 50 ?> &euro;<a class="" href="./.anmeldeformular.pdf"> anmelden</a></strong></td>
 </tr>
 
 
@@ -50,14 +50,14 @@ $costs = 360;
 <strong>Pfingstferien</strong></td></tr>
 <tr>
 <td>1. Woche</td>
-<td>So, 20.05. - Do, 24.05.<?php echo $year ?><br />
+<td>So, 09.06. - Do, 13.06.<?php echo $year ?><br />
 <span style="font-size:0.8em;color:#888;">(Verl&auml;ngerung m&ouml;glich)</span></td>
 <td><strong><?php echo $costs ?> &euro;<a class="" href="./.anmeldeformular.pdf"> anmelden</a><br />
 <span style="color:#888; font-size:0.8em;">+ 55 &euro; / Tag Verl&auml;ngerung</span></strong></td>
 </tr>
 <tr>
 <td>2. Woche</td>
-<td>Mo, 28.05. - Fr, 01.06.<?php echo $year ?></td>
+<td>Mo, 17.06. - Fr, 21.06.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro;<a class="" href="./.anmeldeformular.pdf"> anmelden</a><br />
 </strong></td>
 </tr>
@@ -71,37 +71,37 @@ $costs = 360;
 <strong>Sommerferien</strong></td></tr>
 <tr>
 <td><span class="">1. Woche:</span></td>
-<td>Mo, 30.07. - Fr, 03.08.<?php echo $year ?></td>
+<td>Mo, 29.07. - Fr, 02.08.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro;</strong> <a href="./.anmeldeformular.pdf"> anmelden</a></td></tr>
 
 <tr>
 <td><span class="">2. Woche:</span></td>
-<td>Mo, 06.08. - Fr, 10.08.<?php echo $year ?></td>
+<td>Mo, 05.08. - Fr, 09.08.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro;</strong><!-- color: #00e000; --> <a href="./.anmeldeformular.pdf"> anmelden</a></td>
 </tr>
 
 <tr>
 <td><span class="">3. Woche:</span></td>
-<td>Mo, 13.08. - Fr, 17.08.<?php echo $year ?></td>
+<td>Mo, 12.08. - Fr, 16.08.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro; </strong><!--<a href="./.anmeldeformular.pdf">--> auf Anfrage<!--</a>--></td>
 </tr>
 
 <tr>
 <td><span class="">4. Woche:</span></td>
-<td>Mo, 20.08. - Fr, 24.08.<?php echo $year ?></td>
+<td>Mo, 19.08. - Fr, 23.08.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro;</strong><!-- color: #00e000; --> <a href="./.anmeldeformular.pdf"> anmelden</a></td>
 </tr>
 
 <tr>
 <td>5. Woche:</td>
-<td>Mo, 27.08. - Fr, 31.08.<?php echo $year ?></td>
+<td>Mo, 26.08. - Fr, 30.08.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro;</strong><!-- color: #00e000; --> <a href="./.anmeldeformular.pdf"> anmelden</a></td>
 <!--<td><strong>*** &nbsp;&euro; </strong> Kreisjugendring</td>-->
 </tr>
 
 <tr>
 <td>6. Woche:</td>
-<td>Mo, 03.09. - Fr, 07.09.<?php echo $year ?></td>
+<td>Mo, 02.09. - Fr, 06.09.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro; </strong><!--<a href="./.anmeldeformular.pdf">--> auf Anfrage<!--</a>--></td>
 </tr>
 
@@ -121,7 +121,7 @@ $costs = 360;
 <strong>Herbstferien</strong></td></tr>
 <tr>
 <td>1. Woche</td>
-<td>Mo, 29.10. - Fr, 02.11.<?php echo $year ?></td>
+<td>Mo, 28.10. - Fr, 01.11.<?php echo $year ?></td>
 <td><strong><?php echo $costs ?> &euro;</strong> <a href="./.anmeldeformular.pdf"> anmelden</a></td></tr>
 
 <tr><td colspan="3"><!-- ____________________________ --><hr class="trenn1" /></td></tr>

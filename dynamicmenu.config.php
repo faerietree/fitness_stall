@@ -86,12 +86,17 @@ $evolved = true;
 $orderBy = 'order';
 $orderMode = 'asc';
 $homeAlwaysAtTop = true;
-$menuMap = array('Home', 'Seashark');  #Test
 $translate = true;
 //um 1click-language-switch unabhängig zu machen, nachfolgende Zeile entkommentieren
 #$translate = array('en_file'=>'de_file','english'=>'englisch','german'=>'deutsch');
-
-
+$menuMap =
+$translate = array(
+	'Unser_Hof'=>'',
+	'Unsere_Angebote'=>'',
+	'Unsere_Pferde'=>'',
+	'Unsere_Milchschafe'=>'',
+	'Erlebnisbauernhof'=>'',
+);
 
 
 #WEITERE MENU-EINTRAGE (statisch, d.h. z.B. www.google.com)
