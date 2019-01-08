@@ -62,7 +62,7 @@ if (isset($_POST['task'])) {
     case 'register':
         User::register();
         break;
-        
+
     case 'validate':
         User::validate($_GET['u'], $_GET['v']);
         break;

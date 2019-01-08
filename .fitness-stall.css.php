@@ -1,7 +1,7 @@
 <?php header('Content-type: text/css'); ?>
 /**--------------------------------------**
  * by FairyTale Magic Green Physic engineering for fantasy. dragontale.de
- * Anna Tenzer, Mona Fuhrmann, Marisa Mair, Jan R.I.Balzer-Wein von Zenker und Wegelein.
+ * Anna Tenzer, Mona Fuhrmann, Marisa Meier, Jan R.I.Balzer-Wein von Zenker und Wegelein.
  * Cascading Style Sheet -- Open source ecology.
  **--------------------------------------**/
 
@@ -9,7 +9,6 @@
 
 
 @import url("css/style.css");
-@import url("css/Sidebar-Left.css");
 @import url("css/mobile.css");
 /*mozilla developer examples:
 @import url("fineprint.css") print;
@@ -71,7 +70,7 @@ div.bloglist a:hover {
     text-shadow:15px 5px 4px royalblue;
 	opacity: .9;
 	filter: alpha(opacity=90);
-	
+
 }
 div#allCategories {
     position: fixed;
@@ -85,7 +84,7 @@ div#allCategories {
 	font-size: .7em !important;
 }
 div#allCategories a {
-    
+
 }
 
 
@@ -223,8 +222,8 @@ button {
     background-image: -moz-linear-gradient(-90deg, #BBB, #333);
     background-image: -webkit-gradient(linear, 0% 120%, 0% 0%, from(#BBB), to(#333));
     <?php } ?>
-    
-    
+
+
     margin-top:0;
     -webkit-box-shadow: 2px 2px 1px #333, 0px 0px 20px inset;
     -o-box-shadow: 2px 2px 1px #333, 0px 0px 20px inset;
@@ -296,9 +295,9 @@ div.miniTable > div > div:nth-child(odd) {
 
 
 
-  
-  
-  
+
+
+
 
 
 /* ids */
@@ -334,24 +333,24 @@ div.miniTable > div > div:nth-child(odd) {
     width: 400px;
     background-color: lavender;
     text-align: center;
-    
+
     position: absolute;
     top:    81px;/*116px;*//*-14px;*/
     margin-top: 2%;
     left: 50%;
     margin-left: -200px;
-    
+
     -moz-box-shadow: 0px 0px 14px inset, 0 1px 25px;
     -webkit-box-shadow: 0px 0px 14px inset, 0 1px 25px;
     box-shadow: 0px 0px 14px inset, 0 1px 25px;
-    
+
     -moz-border-radius: 1% 1% 2% 2%;
     -webkit-border-radius: 1% 1% 2% 2%;
     border-radius: 1% 1% 2% 2%;
-    
+
     opacity: 0.8;
     filter: alpha(opacity=80);
-    
+
     border: 1px solid #999999 inset;
     min-height: 28px;
     padding: 7px 5px;
@@ -359,7 +358,7 @@ div.miniTable > div > div:nth-child(odd) {
 #pwMessage {
     width: 350px;
 }
- 
+
 form#usrRow {
     position: absolute;
     top: -50px;
@@ -372,13 +371,13 @@ form#usrRow input {
     -moz-box-shadow:0 0 10px inset, 0 0 0px royalblue;
     -webkit-box-shadow:0 0 10px coral inset, 0 0 0px royalblue;
     box-shadow: 0 0 10px inset coral, 0 0 0px royalblue;
-    
+
     color:coral;
     cursor:pointer;
     font-size:0.7em;
     font-weight:bold;
     margin-top: 1px;
- 
+
     -moz-transition: all 0.75s ease-in-out 0s;
     -webkit-transition: all 0.75s ease-in-out;
     -o-transition: all 0.75s ease-in-out;
@@ -391,7 +390,7 @@ form#usrRow input:hover {
     -moz-box-shadow:0 0 19px inset, 0 0 10px royalblue;
     -webkit-box-shadow:0 0 19px coral inset, 0 0 10px royalblue;
     box-shadow: 0 0 19px coral inset, 0 0 10px royalblue;
-    
+
 }
 form#usrRow span {
     -moz-box-shadow:0 0 10px coral, 0 0 30px coral inset;
@@ -650,7 +649,7 @@ div.moreflowers {
 	/*text-shadow: 1px 1px 1px lavenderblush;*/
 }
 .content {
-    
+
 }
 div.bodyMiddleOnly {
     /*
@@ -789,7 +788,7 @@ div.innerW {
 	font-size: 10px;
 	font-weight: bold;
 }
-	
+
 .quicklinks {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 10px;

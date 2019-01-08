@@ -10,7 +10,7 @@
         <?php endif ?>
         <li><span id="copyright">&copy; Fitness-Stall Badwerk</span> <!--<span class="meta-sep">|</span>-->
         </li><li> | </li>
-        <li>design by <a href="http://www.studio7media.de/">A. Juhl</a> &amp; <a href="http://github.org/worlddevelopment/">Weltentwicklung</a>
+        <li>by <a href="http://www.studio7media.de/">A. Juhl</a> &amp; <a href="https://github.com/worlddevelopment/">Weltentwicklung</a>
         </li><li> | </li>
         <li><a href="?id=kontakt">Datenschutz</a></li>
         <!-- <li> ]</li> -->

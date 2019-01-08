@@ -1,4 +1,5 @@
 <?php
+declare(encoding='UTF-8');
 /*------------------*
  |Unsere_Pferde.php
  *------------------*/
@@ -152,7 +153,8 @@ else {//NOT LOGGED IN OVERVIEW ?>
                 }
                 // general case:
                 else {
-                    $horseline_render .= /*echo*/ /*ucfirst($key) . */ toFairy($value);
+                    $horseline_render .= /*echo*/ /*ucfirst($key) . */ str_replace('_', ' ', ucfirst($value));
+                    //$horseline_render .= /*echo*/ /*ucfirst($key) . */ toFairy(U::decode($value));
                 }
 
 
@@ -173,6 +175,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     }
                 }
             }
+
             $entry .= $horseline_render . "\n";
             $entry .= '<p>';
 

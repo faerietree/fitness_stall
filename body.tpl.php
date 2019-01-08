@@ -1,6 +1,6 @@
 <div id="wrapper" class="hfeed">
 
-    
+
     <!-- TOP -->
     <?php
 	require('../.determine_file.php');
@@ -10,7 +10,7 @@
         <div id="message" class="<?php echo $baby->getMessageClass(); ?>">
             <?php echo $baby->getMessage().'<br />Blog-Meldung: '
 			.$blog-getMessage(); ?>
-        </div>        
+        </div>
     <?php
     }
     require_once('./top.tpl.php');
@@ -51,6 +51,6 @@
     </div>
     <!-- BOTTOM -->
     <!-- FOOT -->
-    <?php require_once('./foot.tpl.php'); ?>
+    <?php require_once('./footer.php'); ?>
     <div class="footBG"></div>
 </div>
