@@ -169,7 +169,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     }
                     else {
                         $horseline_render .=
-                        /*echo*/ ', ';
+                        /*echo*/ '; ';
                     }
                 }
             }
