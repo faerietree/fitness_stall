@@ -162,7 +162,7 @@ else {//NOT LOGGED IN OVERVIEW ?>
                     /*echo*/ '</strong>';
                 }
                 // Is this the last element pair?
-                if (++$i != $horseL/* - 1*/) {
+                if (++$i != $horseL - 1) {
                     if ($is_name !== false) {
                         $horseline_render .=
                         /*echo*/ ' ~ ';
